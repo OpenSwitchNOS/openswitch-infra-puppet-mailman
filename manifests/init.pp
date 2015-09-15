@@ -4,7 +4,7 @@ class mailman(
   $vhost_name=$::fqdn, 
   $smtpserver = '',
   $smtpuser = '',
-  $smtppass = '',
+  $smtppass = ''
 ) {
 
   include ::httpd
@@ -51,13 +51,13 @@ class mailman(
     require    => Package['mailman'],
   }
 
-  file { '/etc/mailman/en':
-    ensure  => directory,
-    owner   => 'root',
-    group   => 'list',
-    mode    => '0644',
-    recurse => true,
-    require => Package['mailman'],
-    source  => 'puppet:///modules/mailman/html-templates-en',
-  }
+#  file { '/etc/mailman/en':
+#    ensure  => directory,
+#    owner   => 'root',
+#    group   => 'list',
+#    mode    => '0644',
+#    recurse => true,
+#    require => Package['mailman'],
+#    source  => 'puppet:///modules/mailman/html-templates-en',
+#  }
 }
