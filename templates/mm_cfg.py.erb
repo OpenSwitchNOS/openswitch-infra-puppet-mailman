@@ -117,3 +117,8 @@ VERP_DELIVERY_INTERVAL       = 0
 # Private_roster == 0: anyone can see, 1: members only, 2: admin only.
 DEFAULT_PRIVATE_ROSTER = 2
 
+SMTP_AUTH = Yes
+SMTP_USERNAME = '<%= @smtpuser %>'
+SMTP_PASSWORD = '<%= @smtppass %>'
+SMTPHOST = '<%= @smtpserver %>'
+DELIVERY_MODULE = 'ASMTPDirect'

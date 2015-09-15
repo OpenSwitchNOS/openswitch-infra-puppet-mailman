@@ -1,6 +1,11 @@
 # == Class: mailman
 #
-class mailman($vhost_name=$::fqdn) {
+class mailman(
+  $vhost_name=$::fqdn, 
+  $smtpserver = '',
+  $smtpuser = '',
+  $smtppass = '',
+) {
 
   include ::httpd
 
