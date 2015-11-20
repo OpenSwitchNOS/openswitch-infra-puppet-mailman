@@ -122,4 +122,6 @@ SMTP_USERNAME = '<%= @smtpuser %>'
 SMTP_PASSWORD = '<%= @smtppass %>'
 SMTPHOST = '<%= @smtpserver %>'
 SMTPPORT = '587'
+# AWS has a limit of 50 recipients per transaction
+SMTP_MAX_RCPTS = 45
 DELIVERY_MODULE = 'ASMTPDirect'
